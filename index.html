@@ -21,11 +21,11 @@
   h1,h2,h3,.disp{font-family:Marcellus,Georgia,serif;font-weight:400;letter-spacing:.005em}
   .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
   .label{font-size:11px;letter-spacing:4px;color:var(--dourado);font-weight:600;text-transform:uppercase}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:4px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;padding:14px 26px;cursor:pointer;border:none;transition:transform .14s ease,background .14s ease,box-shadow .14s ease}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:4px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;padding:14px 26px;cursor:pointer;border:none;transition:transform .14s ease,background .14s ease}
   .btn:hover{transform:translateY(-1px)}
-  .btn-esc{background:var(--nogueira);color:var(--linho) !important;box-shadow:0 5px 16px rgba(78,53,36,.24)}
+  .btn-esc{background:var(--nogueira);color:var(--linho) !important;box-shadow:0 5px 16px rgba(78,53,36,.22)}
   .btn-esc:hover{background:var(--nogueira-cl)}
-  .btn-ouro{background:var(--ambar);color:#fff !important;box-shadow:0 5px 16px rgba(201,126,30,.28)}
+  .btn-ouro{background:var(--ambar);color:#fff !important;box-shadow:0 5px 16px rgba(201,126,30,.26)}
   .btn-linha{border:1.5px solid var(--dourado);color:var(--nogueira) !important;background:transparent}
   .btn-sm{padding:10px 18px;font-size:14px}
 
@@ -41,44 +41,41 @@
   nav.menu{display:flex;gap:24px;align-items:center}
   nav.menu a{font-size:14px;color:var(--cinza);font-weight:500}
 
-  .hero{text-align:center;padding:72px 24px 0;background:
-    radial-gradient(620px 300px at 15% -5%, rgba(196,154,108,.22), transparent 70%),
-    radial-gradient(560px 280px at 86% 10%, rgba(169,125,60,.16), transparent 70%), var(--linho)}
+  .hero{text-align:center;padding:76px 24px 64px;background:
+    radial-gradient(620px 300px at 15% -5%, rgba(196,154,108,.24), transparent 70%),
+    radial-gradient(560px 280px at 86% 10%, rgba(169,125,60,.17), transparent 70%), var(--linho)}
   .hero-inner{max-width:820px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px}
   .hero h1{font-size:clamp(36px,4.8vw,56px);line-height:1.1;margin:0;max-width:760px;color:var(--nogueira)}
   .hero p.sub{max-width:580px;color:var(--cinza);margin:0;font-size:17px}
   .ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:4px}
-  .selos{display:flex;gap:0;margin:32px auto 0;flex-wrap:wrap;justify-content:center;border:1px solid var(--linha);border-radius:6px;background:var(--branco);overflow:hidden}
+  .selos{display:flex;gap:0;margin:30px auto 0;flex-wrap:wrap;justify-content:center;border:1px solid var(--linha);border-radius:6px;background:var(--branco);overflow:hidden}
   .selo{padding:16px 28px;display:flex;flex-direction:column;gap:2px;align-items:center;border-right:1px solid var(--linha)}
   .selo:last-child{border-right:none}
   .selo b{font-family:Marcellus,Georgia,serif;font-size:19px;color:var(--nogueira)}
   .selo span{font-size:11.5px;letter-spacing:.6px;color:var(--cinza-cl)}
-  .faixa{margin-top:52px;display:grid;grid-template-columns:repeat(4,1fr);height:190px;overflow:hidden}
-  .faixa img{width:100%;height:100%;object-fit:cover;display:block}
 
-  section{padding:80px 0}
-  .sec-head{display:flex;flex-direction:column;gap:9px;margin-bottom:34px;align-items:center;text-align:center}
+  section{padding:76px 0}
+  .sec-head{display:flex;flex-direction:column;gap:9px;margin-bottom:32px;align-items:center;text-align:center}
   .sec-head h2{font-size:clamp(27px,3.3vw,39px);margin:0;color:var(--nogueira)}
-  .sec-head p{color:var(--cinza);max-width:580px;margin:0}
+  .sec-head p{color:var(--cinza);max-width:600px;margin:0}
 
-  /* PORTFÓLIO */
-  .filtros{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
-  .fchip{padding:9px 18px;border-radius:999px;border:1px solid var(--linha);background:var(--branco);font-size:14px;font-weight:500;color:var(--cinza);cursor:pointer;transition:all .14s ease}
-  .fchip:hover{border-color:var(--carvalho)}
-  .fchip.on{background:var(--nogueira);border-color:var(--nogueira);color:var(--linho)}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .proj{background:var(--branco);border:1px solid var(--linha);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
-  .proj:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(43,39,36,.13)}
-  .proj .ph{height:210px;overflow:hidden;position:relative;background:var(--creme)}
-  .proj .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-  .proj:hover .ph img{transform:scale(1.04)}
-  .proj .tag{position:absolute;left:12px;top:12px;background:rgba(78,53,36,.9);color:var(--linho);font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;padding:5px 10px;border-radius:3px;font-weight:600}
-  .proj .in{padding:18px 20px 20px;display:flex;flex-direction:column;gap:5px;flex:1}
-  .proj .in h3{margin:0;font-size:20px;color:var(--nogueira)}
-  .proj .in p{margin:0;font-size:13.5px;color:var(--cinza)}
-  .proj .mat{margin-top:8px;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--dourado);font-weight:600}
-  .vazio{text-align:center;color:var(--cinza-cl);padding:30px 0;font-size:14px}
-  .foto-nota{text-align:center;font-size:12px;color:var(--cinza-cl);margin-top:22px;letter-spacing:.3px}
+  /* GALERIA — masonry, imagem inteira, sem recorte */
+  .galeria{columns:3;column-gap:16px}
+  .foto{break-inside:avoid;margin:0 0 16px;position:relative;border-radius:6px;overflow:hidden;background:var(--creme);cursor:zoom-in;box-shadow:0 2px 10px rgba(43,39,36,.07);transition:box-shadow .2s ease,transform .2s ease}
+  .foto:hover{box-shadow:0 12px 28px rgba(43,39,36,.16);transform:translateY(-2px)}
+  .foto img{display:block;width:100%;height:auto}
+  .foto .lupa{position:absolute;right:10px;bottom:10px;width:32px;height:32px;border-radius:50%;background:rgba(78,53,36,.82);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s ease}
+  .foto:hover .lupa{opacity:1}
+  .gal-nota{text-align:center;font-size:12.5px;color:var(--cinza-cl);margin-top:20px;letter-spacing:.2px}
+
+  /* LIGHTBOX */
+  .lb{position:fixed;inset:0;background:rgba(30,22,16,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:28px}
+  .lb.on{display:flex}
+  .lb img{max-width:92vw;max-height:86vh;width:auto;height:auto;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .lb .fechar{position:absolute;top:18px;right:22px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.14);border:none;color:#fff;font-size:22px;cursor:pointer;line-height:1}
+  .lb .seta{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.14);border:none;color:#fff;font-size:24px;cursor:pointer;line-height:1}
+  .lb .ant{left:18px} .lb .prox{right:18px}
+  .lb .cont{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#D9CDBF;font-size:12.5px;letter-spacing:1.4px}
 
   /* COMO FUNCIONA */
   .como{background:var(--creme)}
@@ -87,8 +84,6 @@
   .passo .n{font-family:Marcellus,Georgia,serif;font-size:30px;color:var(--carvalho);line-height:1}
   .passo h3{margin:0;font-size:18px;color:var(--nogueira)}
   .passo p{margin:0;font-size:14px;color:var(--cinza)}
-  .oficina{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;height:200px}
-  .oficina img{width:100%;height:100%;object-fit:cover;border-radius:6px;display:block}
 
   /* ORÇAMENTO */
   .orc{background:var(--nogueira);color:var(--linho)}
@@ -105,7 +100,6 @@
   .previa-msg b{color:var(--nogueira)}
   .nota-priv{font-size:12px;color:var(--cinza-cl);text-align:center}
 
-  /* DEPOIMENTOS */
   .depos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .depo{background:var(--branco);border:1px solid var(--linha);border-radius:6px;padding:26px 24px;display:flex;flex-direction:column;gap:11px}
   .depo q{font-family:Marcellus,Georgia,serif;font-size:18px;line-height:1.5;color:var(--cinza);quotes:'\201C' '\201D'}
@@ -121,24 +115,23 @@
   .wa:hover{transform:scale(1.07)}
 
   @media(max-width:940px){
-    .grid,.depos{grid-template-columns:1fr 1fr}
+    .galeria{columns:2}
+    .depos{grid-template-columns:1fr}
     .passos{grid-template-columns:1fr 1fr}
     .foot{grid-template-columns:1fr}
     nav.menu a:not(.btn){display:none}
-    section{padding:60px 0}
-    .faixa{grid-template-columns:repeat(2,1fr);height:170px}
-    .oficina{grid-template-columns:1fr;height:auto}
-    .oficina img{height:180px}
+    section{padding:58px 0}
   }
   @media(max-width:580px){
-    .grid,.depos{grid-template-columns:1fr}
+    .galeria{columns:1}
     .selo{padding:13px 18px}
+    .hero{padding:56px 20px 48px}
   }
 </style>
 </head>
 <body>
 
-<div class="preview-bar"><strong>PRÉVIA DE PROPOSTA</strong> &nbsp;·&nbsp; as fotos são ilustrativas — no site final entram os projetos reais da Basch Móveis</div>
+<div class="preview-bar"><strong>PRÉVIA DE PROPOSTA</strong> &nbsp;·&nbsp; todas as fotos são projetos reais da Basch Móveis, do próprio Instagram</div>
 
 <header>
   <div class="nav">
@@ -176,25 +169,17 @@
         <div class="selo"><b>100% sob medida</b><span>nada de módulo pronto</span></div>
       </div>
     </div>
-    <div class="faixa">
-      <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?q=80&w=700&auto=format&fit=crop" alt="Cozinha planejada">
-      <img src="https://images.unsplash.com/photo-1778731660303-1fa5ede75477?q=80&w=700&auto=format&fit=crop" alt="Closet sob medida">
-      <img src="https://images.unsplash.com/photo-1761330439476-3d4abe0f7a53?q=80&w=700&auto=format&fit=crop" alt="Adega e bar">
-      <img src="https://images.unsplash.com/photo-1604062527894-55b0712bbee3?q=80&w=700&auto=format&fit=crop" alt="Livraria e escritório">
-    </div>
   </div>
 
   <section id="projetos">
     <div class="wrap">
       <div class="sec-head">
         <span class="label">Projetos</span>
-        <h2>Cada ambiente tem a sua medida</h2>
-        <p>Filtre pelo ambiente que você quer resolver. Todo projeto sai do desenho antes de virar serragem.</p>
+        <h2>Trabalho entregue, não catálogo</h2>
+        <p>Cozinhas, closets, adegas, painéis e cristaleiras já instalados. Clique em qualquer foto para ver o acabamento de perto.</p>
       </div>
-      <div class="filtros" id="filtros"></div>
-      <div class="grid" id="grid"></div>
-      <div class="vazio" id="vazio" style="display:none">Nenhum projeto nesta categoria ainda.</div>
-      <div class="foto-nota">Imagens ilustrativas de referência — no site final entram as fotos dos projetos já entregues pela Basch Móveis.</div>
+      <div class="galeria" id="galeria"></div>
+      <div class="gal-nota" id="galnota"></div>
     </div>
   </section>
 
@@ -207,13 +192,8 @@
       <div class="passos">
         <div class="passo"><div class="n">01</div><h3>Visita e medição</h3><p>Vou até o local, tiro as medidas reais e entendo o uso do ambiente — quem usa, o que guarda, como abre.</p></div>
         <div class="passo"><div class="n">02</div><h3>Projeto e orçamento</h3><p>Você recebe o desenho do móvel com os materiais definidos e o valor fechado, sem surpresa depois.</p></div>
-        <div class="passo"><div class="n">03</div><h3>Produção na marcenaria</h3><p>Corte, montagem e acabamento feitos com a peça na bancada — madeira maciça, folha ou fórmica, conforme o projeto.</p></div>
+        <div class="passo"><div class="n">03</div><h3>Produção na marcenaria</h3><p>Corte, montagem e acabamento com a peça na bancada — madeira maciça, folha ou fórmica, conforme o projeto.</p></div>
         <div class="passo"><div class="n">04</div><h3>Instalação e ajuste</h3><p>Instalação no local, regulagem de portas e gavetas e limpeza. O móvel só é entregue quando abre e fecha certo.</p></div>
-      </div>
-      <div class="oficina">
-        <img src="https://images.unsplash.com/photo-1659930087003-2d64e33181f7?q=80&w=700&auto=format&fit=crop" alt="Medição e marcação da madeira" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1590880795696-20c7dfadacde?q=80&w=700&auto=format&fit=crop" alt="Bancada com o projeto" loading="lazy">
-        <img src="https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?q=80&w=700&auto=format&fit=crop" alt="Produção na marcenaria" loading="lazy">
       </div>
     </div>
   </section>
@@ -238,6 +218,7 @@
             <option>Adega ou bar</option>
             <option>Painel de TV ou rack</option>
             <option>Escritório ou livraria</option>
+            <option>Cristaleira ou aparador</option>
             <option>Banheiro ou lavabo</option>
             <option>Outro ambiente</option>
           </select>
@@ -275,9 +256,9 @@
         <h2>Quem já recebeu o móvel em casa</h2>
       </div>
       <div class="depos">
-        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir por WhatsApp a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
-        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir por WhatsApp a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
-        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir por WhatsApp a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
+        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
+        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
+        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
       </div>
     </div>
   </section>
@@ -294,8 +275,8 @@
             <path d="M14.5 24.5v10.5h19V24.5" stroke="#F7F2EA" stroke-width="1.6" stroke-linejoin="round"/>
             <path d="M14.5 29.6h19M22.4 29.6V35M27.6 24.6v5" stroke="#C49A6C" stroke-width="1.3"/>
           </svg>
-          <span class="txt" style="display:flex;flex-direction:column;line-height:1.15">
-            <b style="font-family:Marcellus,Georgia,serif;font-size:19px;color:#F7F2EA">Basch Móveis</b>
+          <span style="display:flex;flex-direction:column;line-height:1.15">
+            <b style="font-family:Marcellus,Georgia,serif;font-weight:400;font-size:19px;color:#F7F2EA">Basch Móveis</b>
             <span style="font-size:8.5px;letter-spacing:2.6px;color:#C49A6C;text-transform:uppercase">Marcenaria sob medida</span>
           </span>
         </div>
@@ -303,62 +284,52 @@
       </div>
       <div>
         <h4>Contato</h4>
-        <a id="wafoot" href="#orcamento" target="_blank" rel="noopener">WhatsApp para orçamento</a>
+        <a href="https://wa.me/5511922026829" target="_blank" rel="noopener">WhatsApp (11) 92202-6829</a>
         <a href="https://www.instagram.com/danielschilive/" target="_blank" rel="noopener">@danielschilive</a>
       </div>
       <div>
         <h4>Ambientes</h4>
         <p>Cozinhas · Closets · Adegas</p>
-        <p>Painéis · Escritórios · Lavabos</p>
+        <p>Painéis · Cristaleiras · Escritórios</p>
       </div>
     </div>
     <div class="fbot">
       <span>© 2026 Basch Móveis · Marcenaria sob medida</span>
-      <span>Prévia de proposta · imagens ilustrativas (Unsplash)</span>
+      <span>Prévia de proposta · fotos do acervo da Basch Móveis</span>
     </div>
   </div>
 </footer>
 
-<a class="wa" id="waflut" href="#orcamento" aria-label="WhatsApp">
+<div class="lb" id="lb" onclick="if(event.target.id==='lb')fecha()">
+  <button class="fechar" onclick="fecha()" aria-label="Fechar">&times;</button>
+  <button class="seta ant" onclick="nav(-1)" aria-label="Anterior">&#8249;</button>
+  <img id="lbimg" alt="Projeto da Basch Móveis">
+  <button class="seta prox" onclick="nav(1)" aria-label="Próxima">&#8250;</button>
+  <div class="cont" id="lbcont"></div>
+</div>
+
+<a class="wa" href="https://wa.me/5511922026829?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg width="27" height="27" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="#fff" stroke-width="1.8"/><path d="M9 9.5c.4 2.4 2.7 4.9 5.4 5.5l1.4-1.4-2-1.2-1 .7c-.9-.5-1.8-1.4-2.2-2.3l.7-1-1.2-2-1.1 1.7Z" fill="#fff"/></svg>
 </a>
 
+<script src="fotos.js"></script>
 <script>
 var WA='5511922026829';
-var CATS=['Todos','Cozinhas','Closets e guarda-roupas','Adega e bar','Painéis e racks','Escritório e livraria'];
-var PROJ=[
- {c:'Cozinhas',t:'Cozinha em tom claro',d:'Torre quente, gavetões com corrediça telescópica e nicho para o forno embutido.',m:'Folha de madeira + fórmica',f:'1602028915047-37269d1a73f7'},
- {c:'Cozinhas',t:'Cozinha com ilha',d:'Ilha com cuba e armários até o teto para aproveitar cada centímetro do pé-direito.',m:'Fórmica texturizada',f:'1588854337236-6889d631faa8'},
- {c:'Cozinhas',t:'Copa com vidro',d:'Portas de vidro para louça de uso diário e iluminação interna nas prateleiras.',m:'Madeira maciça',f:'1502005097973-6a7082348e28'},
- {c:'Closets e guarda-roupas',t:'Closet aberto',d:'Cabideiros em dois níveis, sapateira inclinada e gaveteiro central.',m:'Folha de madeira',f:'1778731660303-1fa5ede75477'},
- {c:'Closets e guarda-roupas',t:'Dressing com penteadeira',d:'Bancada de apoio com espelho e tomada embutida, integrada ao guarda-roupa.',m:'Fórmica + maciça',f:'1781473377372-8690a514c152'},
- {c:'Closets e guarda-roupas',t:'Guarda-roupa com espelho',d:'Porta de correr espelhada para ampliar o quarto e nichos abertos para o dia a dia.',m:'Folha de madeira',f:'1629078691371-2c83d139c986'},
- {c:'Adega e bar',t:'Adega com iluminação',d:'Nichos calculados para a garrafa em pé e deitada, com LED quente embutido.',m:'Madeira maciça',f:'1761330439476-3d4abe0f7a53'},
- {c:'Adega e bar',t:'Bar suspenso',d:'Prateleiras fixadas na alvenaria, sem pé no chão, para liberar a circulação.',m:'Maciça com verniz',f:'1594272807878-93df1f68c357'},
- {c:'Adega e bar',t:'Cristaleira e apoio',d:'Espaço para taça pendurada, garrafas e utensílios em um só módulo.',m:'Folha + vidro',f:'1727878935404-54d1c9f5bd16'},
- {c:'Painéis e racks',t:'Painel de TV ripado',d:'Painel com passagem de fiação escondida e rack suspenso para facilitar a limpeza.',m:'Folha de madeira',f:'1631048501813-f9eda5b0b527'},
- {c:'Painéis e racks',t:'Sala integrada',d:'Painel, rack e aparador desenhados como uma peça só, na mesma tonalidade.',m:'Fórmica amadeirada',f:'1713453321322-28ef26986cc0'},
- {c:'Painéis e racks',t:'Estante de sala',d:'Estante mista com portas fechadas embaixo e prateleiras abertas em cima.',m:'Maciça + fórmica',f:'1635286721033-e11cf9e632c4'},
- {c:'Escritório e livraria',t:'Livraria até o teto',d:'Prateleiras reforçadas para suportar peso de livro sem barrigar com o tempo.',m:'Madeira maciça',f:'1604062527894-55b0712bbee3'},
- {c:'Escritório e livraria',t:'Home office compacto',d:'Bancada de trabalho, gaveteiro e prateleiras aproveitando parede de 2,20 m.',m:'Fórmica + folha',f:'1620388640952-35a1d22d158d'},
- {c:'Escritório e livraria',t:'Estante com bancada',d:'Estante que vira mesa de apoio, para escritório que também é sala de visita.',m:'Folha de madeira',f:'1560449752-3fd4bdbe7df0'}
-];
-var atual='Todos';
-function renderFiltros(){
-  document.getElementById('filtros').innerHTML=CATS.map(function(c){
-    return '<div class="fchip'+(c===atual?' on':'')+'" onclick="filtrar(\''+c.replace(/'/g,"")+'\')">'+c+'</div>';
+var F=(window.FOTOS||[]);
+function galeria(){
+  var g=document.getElementById('galeria');
+  if(!F.length){ g.innerHTML=''; document.getElementById('galnota').textContent='As fotos dos projetos entram aqui.'; return; }
+  g.innerHTML=F.map(function(f,i){
+    return '<figure class="foto" onclick="abre('+i+')"><img src="'+f.src+'" alt="Projeto da Basch Móveis" loading="lazy" width="'+f.w+'" height="'+f.h+'">'+
+      '<span class="lupa"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="#fff" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span></figure>';
   }).join('');
+  document.getElementById('galnota').textContent=F.length+' projetos entregues · fotos do acervo da Basch Móveis';
 }
-function renderGrid(){
-  var lista=PROJ.filter(function(p){return atual==='Todos'||p.c===atual;});
-  document.getElementById('vazio').style.display=lista.length?'none':'block';
-  document.getElementById('grid').innerHTML=lista.map(function(p){
-    return '<article class="proj"><div class="ph"><span class="tag">'+p.c+'</span>'+
-      '<img src="https://images.unsplash.com/photo-'+p.f+'?q=80&w=800&auto=format&fit=crop" alt="'+p.t+'" loading="lazy"></div>'+
-      '<div class="in"><h3>'+p.t+'</h3><p>'+p.d+'</p><div class="mat">'+p.m+'</div></div></article>';
-  }).join('');
-}
-function filtrar(c){ atual=c; renderFiltros(); renderGrid(); }
+var atual=0;
+function abre(i){ atual=i; var l=document.getElementById('lb'); document.getElementById('lbimg').src=F[i].src; document.getElementById('lbcont').textContent=(i+1)+' de '+F.length; l.classList.add('on'); document.body.style.overflow='hidden'; }
+function fecha(){ document.getElementById('lb').classList.remove('on'); document.body.style.overflow=''; }
+function nav(d){ event.stopPropagation(); atual=(atual+d+F.length)%F.length; document.getElementById('lbimg').src=F[atual].src; document.getElementById('lbcont').textContent=(atual+1)+' de '+F.length; }
+document.addEventListener('keydown',function(e){ if(!document.getElementById('lb').classList.contains('on'))return; if(e.key==='Escape')fecha(); if(e.key==='ArrowLeft'){atual=(atual-1+F.length)%F.length;document.getElementById('lbimg').src=F[atual].src;document.getElementById('lbcont').textContent=(atual+1)+' de '+F.length;} if(e.key==='ArrowRight'){atual=(atual+1)%F.length;document.getElementById('lbimg').src=F[atual].src;document.getElementById('lbcont').textContent=(atual+1)+' de '+F.length;} });
 function mat(el){ document.querySelectorAll('#mats .chip').forEach(function(c){c.classList.remove('on')}); el.classList.add('on'); montar(); }
 function texto(){
   var n=(document.getElementById('nome').value||'').trim();
@@ -372,15 +343,8 @@ function texto(){
   return s;
 }
 function montar(){ document.getElementById('previa').innerHTML='<b>“</b>'+texto()+'<b>”</b>'; }
-function enviar(){
-  var url = WA.indexOf('_')>=0 ? 'https://wa.me/?text='+encodeURIComponent(texto())
-                               : 'https://wa.me/'+WA+'?text='+encodeURIComponent(texto());
-  window.open(url,'_blank');
-}
-var _u = WA.indexOf('_')>=0 ? '#orcamento' : 'https://wa.me/'+WA+'?text='+encodeURIComponent('Olá! Vim pelo site e quero um orçamento.');
-document.getElementById('wafoot').setAttribute('href', _u);
-document.getElementById('waflut').setAttribute('href', WA.indexOf('_')>=0 ? '#orcamento' : 'https://wa.me/'+WA+'?text='+encodeURIComponent('Olá! Vim pelo site e quero um orçamento.'));
-renderFiltros(); renderGrid(); montar();
+function enviar(){ window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(texto()),'_blank'); }
+galeria(); montar();
 </script>
 </body>
 </html>
