@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Basch Móveis · Marcenaria sob medida — São Paulo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600;700&display=swap">
+<style>
+  :root{
+    --nogueira:#4E3524; --nogueira-cl:#6B4A33; --carvalho:#C49A6C; --dourado:#A97D3C;
+    --ambar:#C97E1E; --linho:#F7F2EA; --creme:#EFE7DA; --branco:#FFFFFF;
+    --grafite:#2B2724; --cinza:#6E665C; --cinza-cl:#9A9188; --linha:#E6DDD0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Manrope,'Trebuchet MS',Verdana,sans-serif;color:var(--grafite);background:var(--linho);font-size:16px;line-height:1.7}
+  a{color:var(--nogueira);text-decoration:none}
+  a:hover{color:var(--ambar)}
+  h1,h2,h3,.disp{font-family:Marcellus,Georgia,serif;font-weight:400;letter-spacing:.005em}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  .label{font-size:11px;letter-spacing:4px;color:var(--dourado);font-weight:600;text-transform:uppercase}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:4px;font-family:Manrope,sans-serif;font-size:15px;font-weight:600;padding:14px 26px;cursor:pointer;border:none;transition:transform .14s ease,background .14s ease,box-shadow .14s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-esc{background:var(--nogueira);color:var(--linho) !important;box-shadow:0 5px 16px rgba(78,53,36,.24)}
+  .btn-esc:hover{background:var(--nogueira-cl)}
+  .btn-ouro{background:var(--ambar);color:#fff !important;box-shadow:0 5px 16px rgba(201,126,30,.28)}
+  .btn-linha{border:1.5px solid var(--dourado);color:var(--nogueira) !important;background:transparent}
+  .btn-sm{padding:10px 18px;font-size:14px}
+
+  .preview-bar{background:var(--grafite);color:#CFC6BA;font-size:12px;letter-spacing:.5px;text-align:center;padding:9px 16px}
+  .preview-bar strong{color:var(--carvalho);font-weight:600}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(247,242,234,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--linha)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 24px;max-width:1120px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .txt{display:flex;flex-direction:column;line-height:1.15}
+  .brand .txt b{font-family:Marcellus,Georgia,serif;font-weight:400;font-size:20px;color:var(--nogueira);letter-spacing:.02em}
+  .brand .txt span{font-size:8.5px;letter-spacing:2.6px;color:var(--dourado);text-transform:uppercase}
+  nav.menu{display:flex;gap:24px;align-items:center}
+  nav.menu a{font-size:14px;color:var(--cinza);font-weight:500}
+
+  .hero{text-align:center;padding:72px 24px 0;background:
+    radial-gradient(620px 300px at 15% -5%, rgba(196,154,108,.22), transparent 70%),
+    radial-gradient(560px 280px at 86% 10%, rgba(169,125,60,.16), transparent 70%), var(--linho)}
+  .hero-inner{max-width:820px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px}
+  .hero h1{font-size:clamp(36px,4.8vw,56px);line-height:1.1;margin:0;max-width:760px;color:var(--nogueira)}
+  .hero p.sub{max-width:580px;color:var(--cinza);margin:0;font-size:17px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+  .selos{display:flex;gap:0;margin:32px auto 0;flex-wrap:wrap;justify-content:center;border:1px solid var(--linha);border-radius:6px;background:var(--branco);overflow:hidden}
+  .selo{padding:16px 28px;display:flex;flex-direction:column;gap:2px;align-items:center;border-right:1px solid var(--linha)}
+  .selo:last-child{border-right:none}
+  .selo b{font-family:Marcellus,Georgia,serif;font-size:19px;color:var(--nogueira)}
+  .selo span{font-size:11.5px;letter-spacing:.6px;color:var(--cinza-cl)}
+  .faixa{margin-top:52px;display:grid;grid-template-columns:repeat(4,1fr);height:190px;overflow:hidden}
+  .faixa img{width:100%;height:100%;object-fit:cover;display:block}
+
+  section{padding:80px 0}
+  .sec-head{display:flex;flex-direction:column;gap:9px;margin-bottom:34px;align-items:center;text-align:center}
+  .sec-head h2{font-size:clamp(27px,3.3vw,39px);margin:0;color:var(--nogueira)}
+  .sec-head p{color:var(--cinza);max-width:580px;margin:0}
+
+  /* PORTFÓLIO */
+  .filtros{display:flex;gap:9px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+  .fchip{padding:9px 18px;border-radius:999px;border:1px solid var(--linha);background:var(--branco);font-size:14px;font-weight:500;color:var(--cinza);cursor:pointer;transition:all .14s ease}
+  .fchip:hover{border-color:var(--carvalho)}
+  .fchip.on{background:var(--nogueira);border-color:var(--nogueira);color:var(--linho)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .proj{background:var(--branco);border:1px solid var(--linha);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+  .proj:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(43,39,36,.13)}
+  .proj .ph{height:210px;overflow:hidden;position:relative;background:var(--creme)}
+  .proj .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+  .proj:hover .ph img{transform:scale(1.04)}
+  .proj .tag{position:absolute;left:12px;top:12px;background:rgba(78,53,36,.9);color:var(--linho);font-size:10.5px;letter-spacing:1.4px;text-transform:uppercase;padding:5px 10px;border-radius:3px;font-weight:600}
+  .proj .in{padding:18px 20px 20px;display:flex;flex-direction:column;gap:5px;flex:1}
+  .proj .in h3{margin:0;font-size:20px;color:var(--nogueira)}
+  .proj .in p{margin:0;font-size:13.5px;color:var(--cinza)}
+  .proj .mat{margin-top:8px;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--dourado);font-weight:600}
+  .vazio{text-align:center;color:var(--cinza-cl);padding:30px 0;font-size:14px}
+  .foto-nota{text-align:center;font-size:12px;color:var(--cinza-cl);margin-top:22px;letter-spacing:.3px}
+
+  /* COMO FUNCIONA */
+  .como{background:var(--creme)}
+  .passos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .passo{background:var(--branco);border:1px solid var(--linha);border-radius:6px;padding:24px 22px;display:flex;flex-direction:column;gap:7px}
+  .passo .n{font-family:Marcellus,Georgia,serif;font-size:30px;color:var(--carvalho);line-height:1}
+  .passo h3{margin:0;font-size:18px;color:var(--nogueira)}
+  .passo p{margin:0;font-size:14px;color:var(--cinza)}
+  .oficina{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;height:200px}
+  .oficina img{width:100%;height:100%;object-fit:cover;border-radius:6px;display:block}
+
+  /* ORÇAMENTO */
+  .orc{background:var(--nogueira);color:var(--linho)}
+  .orc .sec-head h2{color:var(--branco)}
+  .orc .sec-head p{color:#D8C9B6}
+  .orc .label{color:var(--carvalho)}
+  .card-orc{max-width:660px;margin:0 auto;background:var(--branco);border-radius:8px;padding:34px;display:flex;flex-direction:column;gap:16px;box-shadow:0 16px 44px rgba(0,0,0,.22)}
+  .flabel{font-size:11px;letter-spacing:2px;color:var(--dourado);font-weight:600;text-transform:uppercase;margin-bottom:7px;display:block}
+  .campo{width:100%;height:46px;border:1px solid var(--linha);border-radius:4px;background:var(--linho);padding:0 13px;font-family:Manrope,sans-serif;font-size:14.5px;color:var(--grafite);outline:none}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{padding:10px 16px;border:1px solid var(--linha);border-radius:4px;background:var(--branco);font-size:13.5px;color:var(--cinza);cursor:pointer}
+  .chip.on{border:1.5px solid var(--nogueira);background:var(--creme);color:var(--nogueira);font-weight:600}
+  .previa-msg{background:var(--linho);border:1px dashed var(--carvalho);border-radius:5px;padding:14px 16px;font-size:13.5px;color:var(--cinza);line-height:1.6}
+  .previa-msg b{color:var(--nogueira)}
+  .nota-priv{font-size:12px;color:var(--cinza-cl);text-align:center}
+
+  /* DEPOIMENTOS */
+  .depos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .depo{background:var(--branco);border:1px solid var(--linha);border-radius:6px;padding:26px 24px;display:flex;flex-direction:column;gap:11px}
+  .depo q{font-family:Marcellus,Georgia,serif;font-size:18px;line-height:1.5;color:var(--cinza);quotes:'\201C' '\201D'}
+  .depo footer{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--dourado);font-weight:600}
+
+  footer.site{background:var(--grafite);color:#BEB5A9;padding:48px 0 32px;font-size:14px}
+  .foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px}
+  .foot h4{font-family:Marcellus,Georgia,serif;font-size:13px;letter-spacing:2.4px;color:var(--carvalho);margin:0 0 12px;text-transform:uppercase}
+  .foot a,.foot p{color:#BEB5A9;margin:0 0 7px;display:block}
+  .fbot{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:18px;font-size:12px;color:#87807A;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  .wa{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;background:#12A03D;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(18,160,61,.42);transition:transform .14s ease}
+  .wa:hover{transform:scale(1.07)}
+
+  @media(max-width:940px){
+    .grid,.depos{grid-template-columns:1fr 1fr}
+    .passos{grid-template-columns:1fr 1fr}
+    .foot{grid-template-columns:1fr}
+    nav.menu a:not(.btn){display:none}
+    section{padding:60px 0}
+    .faixa{grid-template-columns:repeat(2,1fr);height:170px}
+    .oficina{grid-template-columns:1fr;height:auto}
+    .oficina img{height:180px}
+  }
+  @media(max-width:580px){
+    .grid,.depos{grid-template-columns:1fr}
+    .selo{padding:13px 18px}
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-bar"><strong>PRÉVIA DE PROPOSTA</strong> &nbsp;·&nbsp; as fotos são ilustrativas — no site final entram os projetos reais da Basch Móveis</div>
+
+<header>
+  <div class="nav">
+    <a href="#topo" class="brand" style="color:inherit">
+      <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="22.2" stroke="#A97D3C" stroke-width="1.4"/>
+        <path d="M11 23.5 24 13.5l13 10" stroke="#4E3524" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.5 24.5v10.5h19V24.5" stroke="#4E3524" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M14.5 29.6h19M22.4 29.6V35M27.6 24.6v5" stroke="#C49A6C" stroke-width="1.3"/>
+      </svg>
+      <span class="txt"><b>Basch Móveis</b><span>Marcenaria sob medida</span></span>
+    </a>
+    <nav class="menu">
+      <a href="#projetos">Projetos</a>
+      <a href="#funciona">Como funciona</a>
+      <a href="#clientes">Clientes</a>
+      <a class="btn btn-esc btn-sm" href="#orcamento">Pedir orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="label">Marcenaria sob medida · São Paulo</span>
+      <h1>Móvel sob medida, feito para durar</h1>
+      <p class="sub">Madeira maciça, folha e fórmica. Durabilidade, beleza e acabamento — do projeto na sua planta até a instalação na sua casa.</p>
+      <div class="ctas">
+        <a class="btn btn-esc" href="#orcamento">Pedir orçamento</a>
+        <a class="btn btn-linha" href="#projetos">Ver projetos</a>
+      </div>
+      <div class="selos">
+        <div class="selo"><b>Maciça, folha e fórmica</b><span>você escolhe o material</span></div>
+        <div class="selo"><b>Projeto ao acabamento</b><span>medição, produção e instalação</span></div>
+        <div class="selo"><b>100% sob medida</b><span>nada de módulo pronto</span></div>
+      </div>
+    </div>
+    <div class="faixa">
+      <img src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?q=80&w=700&auto=format&fit=crop" alt="Cozinha planejada">
+      <img src="https://images.unsplash.com/photo-1778731660303-1fa5ede75477?q=80&w=700&auto=format&fit=crop" alt="Closet sob medida">
+      <img src="https://images.unsplash.com/photo-1761330439476-3d4abe0f7a53?q=80&w=700&auto=format&fit=crop" alt="Adega e bar">
+      <img src="https://images.unsplash.com/photo-1604062527894-55b0712bbee3?q=80&w=700&auto=format&fit=crop" alt="Livraria e escritório">
+    </div>
+  </div>
+
+  <section id="projetos">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Projetos</span>
+        <h2>Cada ambiente tem a sua medida</h2>
+        <p>Filtre pelo ambiente que você quer resolver. Todo projeto sai do desenho antes de virar serragem.</p>
+      </div>
+      <div class="filtros" id="filtros"></div>
+      <div class="grid" id="grid"></div>
+      <div class="vazio" id="vazio" style="display:none">Nenhum projeto nesta categoria ainda.</div>
+      <div class="foto-nota">Imagens ilustrativas de referência — no site final entram as fotos dos projetos já entregues pela Basch Móveis.</div>
+    </div>
+  </section>
+
+  <section class="como" id="funciona">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Como funciona</span>
+        <h2>Do primeiro contato à última dobradiça</h2>
+      </div>
+      <div class="passos">
+        <div class="passo"><div class="n">01</div><h3>Visita e medição</h3><p>Vou até o local, tiro as medidas reais e entendo o uso do ambiente — quem usa, o que guarda, como abre.</p></div>
+        <div class="passo"><div class="n">02</div><h3>Projeto e orçamento</h3><p>Você recebe o desenho do móvel com os materiais definidos e o valor fechado, sem surpresa depois.</p></div>
+        <div class="passo"><div class="n">03</div><h3>Produção na marcenaria</h3><p>Corte, montagem e acabamento feitos com a peça na bancada — madeira maciça, folha ou fórmica, conforme o projeto.</p></div>
+        <div class="passo"><div class="n">04</div><h3>Instalação e ajuste</h3><p>Instalação no local, regulagem de portas e gavetas e limpeza. O móvel só é entregue quando abre e fecha certo.</p></div>
+      </div>
+      <div class="oficina">
+        <img src="https://images.unsplash.com/photo-1659930087003-2d64e33181f7?q=80&w=700&auto=format&fit=crop" alt="Medição e marcação da madeira" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1590880795696-20c7dfadacde?q=80&w=700&auto=format&fit=crop" alt="Bancada com o projeto" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1631396326646-c06a935ff3a6?q=80&w=700&auto=format&fit=crop" alt="Produção na marcenaria" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="orc" id="orcamento">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Orçamento</span>
+        <h2>Monte seu pedido em 30 segundos</h2>
+        <p>Preencha e o pedido chega pronto no WhatsApp da Basch Móveis — com ambiente, material e medida já preenchidos.</p>
+      </div>
+      <div class="card-orc">
+        <div>
+          <label class="flabel" for="nome">Seu nome</label>
+          <input class="campo" id="nome" placeholder="Como posso te chamar?" oninput="montar()">
+        </div>
+        <div>
+          <label class="flabel" for="amb">Ambiente</label>
+          <select class="campo" id="amb" onchange="montar()">
+            <option>Cozinha planejada</option>
+            <option>Closet ou guarda-roupa</option>
+            <option>Adega ou bar</option>
+            <option>Painel de TV ou rack</option>
+            <option>Escritório ou livraria</option>
+            <option>Banheiro ou lavabo</option>
+            <option>Outro ambiente</option>
+          </select>
+        </div>
+        <div>
+          <span class="flabel">Material</span>
+          <div class="chips" id="mats">
+            <div class="chip on" onclick="mat(this)">Madeira maciça</div>
+            <div class="chip" onclick="mat(this)">Folha de madeira</div>
+            <div class="chip" onclick="mat(this)">Fórmica</div>
+            <div class="chip" onclick="mat(this)">Ainda não sei</div>
+          </div>
+        </div>
+        <div>
+          <label class="flabel" for="med">Medida aproximada</label>
+          <input class="campo" id="med" placeholder="Ex.: 3,20 m de parede, pé-direito 2,70 m" oninput="montar()">
+        </div>
+        <div>
+          <span class="flabel">Prévia da mensagem que será enviada</span>
+          <div class="previa-msg" id="previa"></div>
+        </div>
+        <button class="btn btn-ouro" style="width:100%" onclick="enviar()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="#fff" stroke-width="1.8"/><path d="M9 9.5c.4 2.4 2.7 4.9 5.4 5.5l1.4-1.4-2-1.2-1 .7c-.9-.5-1.8-1.4-2.2-2.3l.7-1-1.2-2-1.1 1.7Z" fill="#fff"/></svg>
+          Pedir orçamento pelo WhatsApp
+        </button>
+        <span class="nota-priv">Sem cadastro. A conversa acontece direto no WhatsApp da marcenaria.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="clientes">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Clientes</span>
+        <h2>Quem já recebeu o móvel em casa</h2>
+      </div>
+      <div class="depos">
+        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir por WhatsApp a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
+        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir por WhatsApp a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
+        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir por WhatsApp a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand" style="margin-bottom:12px">
+          <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="22.2" stroke="#C49A6C" stroke-width="1.4"/>
+            <path d="M11 23.5 24 13.5l13 10" stroke="#F7F2EA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.5 24.5v10.5h19V24.5" stroke="#F7F2EA" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M14.5 29.6h19M22.4 29.6V35M27.6 24.6v5" stroke="#C49A6C" stroke-width="1.3"/>
+          </svg>
+          <span class="txt" style="display:flex;flex-direction:column;line-height:1.15">
+            <b style="font-family:Marcellus,Georgia,serif;font-size:19px;color:#F7F2EA">Basch Móveis</b>
+            <span style="font-size:8.5px;letter-spacing:2.6px;color:#C49A6C;text-transform:uppercase">Marcenaria sob medida</span>
+          </span>
+        </div>
+        <p>Marcenaria sob medida em São Paulo. Madeira maciça, folha e fórmica — durabilidade, beleza e acabamento.</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a id="wafoot" href="#orcamento" target="_blank" rel="noopener">WhatsApp para orçamento</a>
+        <a href="https://www.instagram.com/danielschilive/" target="_blank" rel="noopener">@danielschilive</a>
+      </div>
+      <div>
+        <h4>Ambientes</h4>
+        <p>Cozinhas · Closets · Adegas</p>
+        <p>Painéis · Escritórios · Lavabos</p>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Basch Móveis · Marcenaria sob medida</span>
+      <span>Prévia de proposta · imagens ilustrativas (Unsplash)</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" id="waflut" href="#orcamento" aria-label="WhatsApp">
+  <svg width="27" height="27" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="#fff" stroke-width="1.8"/><path d="M9 9.5c.4 2.4 2.7 4.9 5.4 5.5l1.4-1.4-2-1.2-1 .7c-.9-.5-1.8-1.4-2.2-2.3l.7-1-1.2-2-1.1 1.7Z" fill="#fff"/></svg>
+</a>
+
+<script>
+var WA='5511922026829';
+var CATS=['Todos','Cozinhas','Closets e guarda-roupas','Adega e bar','Painéis e racks','Escritório e livraria'];
+var PROJ=[
+ {c:'Cozinhas',t:'Cozinha em tom claro',d:'Torre quente, gavetões com corrediça telescópica e nicho para o forno embutido.',m:'Folha de madeira + fórmica',f:'1602028915047-37269d1a73f7'},
+ {c:'Cozinhas',t:'Cozinha com ilha',d:'Ilha com cuba e armários até o teto para aproveitar cada centímetro do pé-direito.',m:'Fórmica texturizada',f:'1588854337236-6889d631faa8'},
+ {c:'Cozinhas',t:'Copa com vidro',d:'Portas de vidro para louça de uso diário e iluminação interna nas prateleiras.',m:'Madeira maciça',f:'1502005097973-6a7082348e28'},
+ {c:'Closets e guarda-roupas',t:'Closet aberto',d:'Cabideiros em dois níveis, sapateira inclinada e gaveteiro central.',m:'Folha de madeira',f:'1778731660303-1fa5ede75477'},
+ {c:'Closets e guarda-roupas',t:'Dressing com penteadeira',d:'Bancada de apoio com espelho e tomada embutida, integrada ao guarda-roupa.',m:'Fórmica + maciça',f:'1781473377372-8690a514c152'},
+ {c:'Closets e guarda-roupas',t:'Guarda-roupa com espelho',d:'Porta de correr espelhada para ampliar o quarto e nichos abertos para o dia a dia.',m:'Folha de madeira',f:'1629078691371-2c83d139c986'},
+ {c:'Adega e bar',t:'Adega com iluminação',d:'Nichos calculados para a garrafa em pé e deitada, com LED quente embutido.',m:'Madeira maciça',f:'1761330439476-3d4abe0f7a53'},
+ {c:'Adega e bar',t:'Bar suspenso',d:'Prateleiras fixadas na alvenaria, sem pé no chão, para liberar a circulação.',m:'Maciça com verniz',f:'1594272807878-93df1f68c357'},
+ {c:'Adega e bar',t:'Cristaleira e apoio',d:'Espaço para taça pendurada, garrafas e utensílios em um só módulo.',m:'Folha + vidro',f:'1727878935404-54d1c9f5bd16'},
+ {c:'Painéis e racks',t:'Painel de TV ripado',d:'Painel com passagem de fiação escondida e rack suspenso para facilitar a limpeza.',m:'Folha de madeira',f:'1631048501813-f9eda5b0b527'},
+ {c:'Painéis e racks',t:'Sala integrada',d:'Painel, rack e aparador desenhados como uma peça só, na mesma tonalidade.',m:'Fórmica amadeirada',f:'1713453321322-28ef26986cc0'},
+ {c:'Painéis e racks',t:'Estante de sala',d:'Estante mista com portas fechadas embaixo e prateleiras abertas em cima.',m:'Maciça + fórmica',f:'1635286721033-e11cf9e632c4'},
+ {c:'Escritório e livraria',t:'Livraria até o teto',d:'Prateleiras reforçadas para suportar peso de livro sem barrigar com o tempo.',m:'Madeira maciça',f:'1604062527894-55b0712bbee3'},
+ {c:'Escritório e livraria',t:'Home office compacto',d:'Bancada de trabalho, gaveteiro e prateleiras aproveitando parede de 2,20 m.',m:'Fórmica + folha',f:'1620388640952-35a1d22d158d'},
+ {c:'Escritório e livraria',t:'Estante com bancada',d:'Estante que vira mesa de apoio, para escritório que também é sala de visita.',m:'Folha de madeira',f:'1560449752-3fd4bdbe7df0'}
+];
+var atual='Todos';
+function renderFiltros(){
+  document.getElementById('filtros').innerHTML=CATS.map(function(c){
+    return '<div class="fchip'+(c===atual?' on':'')+'" onclick="filtrar(\''+c.replace(/'/g,"")+'\')">'+c+'</div>';
+  }).join('');
+}
+function renderGrid(){
+  var lista=PROJ.filter(function(p){return atual==='Todos'||p.c===atual;});
+  document.getElementById('vazio').style.display=lista.length?'none':'block';
+  document.getElementById('grid').innerHTML=lista.map(function(p){
+    return '<article class="proj"><div class="ph"><span class="tag">'+p.c+'</span>'+
+      '<img src="https://images.unsplash.com/photo-'+p.f+'?q=80&w=800&auto=format&fit=crop" alt="'+p.t+'" loading="lazy"></div>'+
+      '<div class="in"><h3>'+p.t+'</h3><p>'+p.d+'</p><div class="mat">'+p.m+'</div></div></article>';
+  }).join('');
+}
+function filtrar(c){ atual=c; renderFiltros(); renderGrid(); }
+function mat(el){ document.querySelectorAll('#mats .chip').forEach(function(c){c.classList.remove('on')}); el.classList.add('on'); montar(); }
+function texto(){
+  var n=(document.getElementById('nome').value||'').trim();
+  var a=document.getElementById('amb').value;
+  var m=(document.querySelector('#mats .chip.on')||{textContent:''}).textContent;
+  var d=(document.getElementById('med').value||'').trim();
+  var s='Olá! '+(n?('Sou '+n+'. '):'')+'Vim pelo site e quero um orçamento de '+a.toLowerCase()+'.';
+  if(m && m!=='Ainda não sei') s+=' Material: '+m.toLowerCase()+'.';
+  if(m==='Ainda não sei') s+=' Ainda não decidi o material e gostaria de orientação.';
+  if(d) s+=' Medida aproximada: '+d+'.';
+  return s;
+}
+function montar(){ document.getElementById('previa').innerHTML='<b>“</b>'+texto()+'<b>”</b>'; }
+function enviar(){
+  var url = WA.indexOf('_')>=0 ? 'https://wa.me/?text='+encodeURIComponent(texto())
+                               : 'https://wa.me/'+WA+'?text='+encodeURIComponent(texto());
+  window.open(url,'_blank');
+}
+var _u = WA.indexOf('_')>=0 ? '#orcamento' : 'https://wa.me/'+WA+'?text='+encodeURIComponent('Olá! Vim pelo site e quero um orçamento.');
+document.getElementById('wafoot').setAttribute('href', _u);
+document.getElementById('waflut').setAttribute('href', WA.indexOf('_')>=0 ? '#orcamento' : 'https://wa.me/'+WA+'?text='+encodeURIComponent('Olá! Vim pelo site e quero um orçamento.'));
+renderFiltros(); renderGrid(); montar();
+</script>
+</body>
+</html>
