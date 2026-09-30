@@ -3,8 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
 <title>Basch Móveis · Marcenaria sob medida — São Paulo</title>
+<meta name="description" content="Basch Móveis — marcenaria sob medida em São Paulo. Cozinhas, closets, adegas, painéis e escritórios em madeira maciça, folha e fórmica, do projeto à instalação.">
+<meta name="theme-color" content="#4E3524">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://baschmoveis.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Basch Móveis">
+<meta property="og:title" content="Basch Móveis · Marcenaria sob medida em São Paulo">
+<meta property="og:description" content="Móveis sob medida em madeira maciça, folha e fórmica — do projeto à instalação. Peça seu orçamento pelo WhatsApp.">
+<meta property="og:url" content="https://baschmoveis.com/">
+<meta property="og:image" content="https://baschmoveis.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600;700&display=swap">
 <style>
@@ -107,6 +120,11 @@
   .depo q{font-family:Marcellus,Georgia,serif;font-size:18px;line-height:1.5;color:var(--cinza);quotes:'\201C' '\201D'}
   .depo footer{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:var(--dourado);font-weight:600}
 
+  .insta-box{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;background:var(--branco);border:1px solid var(--linha);border-radius:8px;padding:36px 40px}
+  .insta-txt{display:flex;flex-direction:column;gap:8px;max-width:560px}
+  .insta-txt h2{margin:0;font-size:clamp(24px,2.8vw,32px);color:var(--nogueira)}
+  .insta-txt p{margin:0;color:var(--cinza)}
+  @media(max-width:580px){.insta-box{padding:28px 22px}.insta-box .btn{width:100%}}
   footer.site{background:var(--grafite);color:#BEB5A9;padding:48px 0 32px;font-size:14px}
   .foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px}
   .foot h4{font-family:Marcellus,Georgia,serif;font-size:13px;letter-spacing:2.4px;color:var(--carvalho);margin:0 0 12px;text-transform:uppercase}
@@ -133,7 +151,6 @@
 </head>
 <body>
 
-<div class="preview-bar"><strong>PRÉVIA DE PROPOSTA</strong> &nbsp;·&nbsp; todas as fotos são projetos reais da Basch Móveis, do próprio Instagram</div>
 
 <header>
   <div class="nav">
@@ -150,7 +167,7 @@
     <nav class="menu">
       <a href="#projetos">Projetos</a>
       <a href="#funciona">Como funciona</a>
-      <a href="#clientes">Clientes</a>
+      <a href="#instagram">Instagram</a>
       <a class="btn btn-esc btn-sm" href="#orcamento">Pedir orçamento</a>
     </nav>
   </div>
@@ -252,16 +269,18 @@
     </div>
   </section>
 
-  <section id="clientes">
+  <section id="instagram" class="insta">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="label">Clientes</span>
-        <h2>Quem já recebeu o móvel em casa</h2>
-      </div>
-      <div class="depos">
-        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
-        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
-        <div class="depo"><q>[DEPOIMENTO REAL DE CLIENTE — pedir a quem já foi atendido]</q><footer>Nome · ambiente · bairro</footer></div>
+      <div class="insta-box">
+        <div class="insta-txt">
+          <span class="label">Instagram</span>
+          <h2>Acompanhe as obras em andamento</h2>
+          <p>Projetos novos, bastidores da oficina e móveis sendo instalados — tudo no perfil do Daniel.</p>
+        </div>
+        <a class="btn btn-esc" href="https://www.instagram.com/danielschilive/" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Seguir @danielschilive
+        </a>
       </div>
     </div>
   </section>
@@ -296,7 +315,7 @@
     </div>
     <div class="fbot">
       <span>© 2026 Basch Móveis · Marcenaria sob medida</span>
-      <span>Prévia de proposta · fotos do acervo da Basch Móveis</span>
+      <span>São Paulo · SP</span>
     </div>
   </div>
 </footer>
