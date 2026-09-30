@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /identidade.html
+
+Sitemap: https://baschmoveis.com/sitemap.xml
